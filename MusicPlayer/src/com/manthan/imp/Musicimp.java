@@ -22,7 +22,7 @@ public class Musicimp {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/MusicPlayer?user=root&password=root");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/music_db?user=root&password=root");
 			String query="select * from Musicsystem where Song_ID=?";		
 			stmt=con.prepareStatement(query);
 			stmt.setLong(1,songid);
@@ -30,17 +30,17 @@ public class Musicimp {
 			if(rs.next()) {
 				int sid11=rs.getInt("Song_ID");
 				String sname=rs.getString("Song_Name");
-				String artname=rs.getString("Artitst_name");
+				String artname=rs.getString("Artist_name");
 				String albname=rs.getString("Album_name");
 				String sloc=rs.getString("Song_Location");
-				String desc=rs.getString("Desc");
+				String desc=rs.getString("Descp");
 				
 				System.out.println("Song_ID  "+sid11);
 				System.out.println("Song_Name  "+sname);
-				System.out.println("Artitst_name  "+artname);
+				System.out.println("Artist_name  "+artname);
 				System.out.println("Album_name   "+albname);
 				System.out.println("Song_Location  "+sloc);
-				System.out.println("Desc  "+desc);
+				System.out.println("Descp  "+desc);
 			}
 		}
 		catch(Exception e) {
@@ -74,7 +74,7 @@ public class Musicimp {
 
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Music?user=root&password=root");
+				con=DriverManager.getConnection("jdbc:mysql://localhost:3306/music_db?user=root&password=root");
 				String query="select * from Musicsysytem where Song_Name=?";		
 				stmt=con.prepareStatement(query);
 				stmt.setString(1,songname);
@@ -82,17 +82,17 @@ public class Musicimp {
 				if(rs.next()) {
 					int sid11=rs.getInt("Song_ID");
 					String sname1=rs.getString("Song_Name");
-					String artname=rs.getString("Artitst_name");
+					String artname=rs.getString("Artist_name");
 					String albname=rs.getString("Album_name");
 					String sloc=rs.getString("Song_Location");
-					String desc=rs.getString("Desc");
+					String desc=rs.getString("Descp");
 					
 					System.out.println("Song_ID  "+sid11);
 					System.out.println("Song_Name "+sname1);
-					System.out.println("Artitst_name  "+artname);
+					System.out.println("Artist_name  "+artname);
 					System.out.println("Album_name   "+albname);
 					System.out.println("Song_Location     "+sloc);
-					System.out.println("Descr  "+desc);
+					System.out.println("Descp "+desc);
 				}
 			}
 			catch(Exception e) {
@@ -147,7 +147,7 @@ public class Musicimp {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Music?user=root&password=root");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/music_db?user=root&password=root");
 			String query="insert into Musicsystem values(?,?,?,?,?,?)";		
 			stmt=con.prepareStatement(query);
 			stmt.setLong(1,songid);
@@ -199,7 +199,7 @@ public class Musicimp {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Music?user=root&password=root");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/music_db?user=root&password=root");
 			String query="delete from Musicsystem where Song_Id=?";		
 			stmt=con.prepareStatement(query);
 			stmt.setLong(1,sid);
@@ -265,8 +265,8 @@ public class Musicimp {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Music?user=root&password=root");
-			String query="update Musicsystem set Song_Id=?,Song_Name=?,Artitst_name=?,Album_name=?,Song_Location=? and Desc=? where Song_ID=?";		
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/music_db?user=root&password=root");
+			String query="update Musicsystem set Song_Id=?,Song_Name=?,Artist_name=?,Album_name=?,Song_Location=? and Descp=? where Song_ID=?";		
 			stmt=con.prepareStatement(query);	
 			stmt.setString(1,songname);
 			stmt.setLong(2,songid1);
@@ -310,7 +310,7 @@ public class Musicimp {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Music?user=root&password=root");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/music_db?user=root&password=root");
 			String query="select * from Musicsystem";		
 			stmt=con.createStatement();
 			rs=stmt.executeQuery(query);
@@ -318,10 +318,10 @@ public class Musicimp {
 			while(rs.next()) {
 				int songid=rs.getInt("Song_ID");
 				String songname=rs.getString("Song_Name");
-				String artname=rs.getString("Artitst_name");
+				String artname=rs.getString("Artist_name");
 				String albumname=rs.getString("Album_name");
 				String songloc=rs.getString("Song_Location");
-				String desc=rs.getString("Desc");
+				String desc=rs.getString("Descp");
 				System.out.println("songid "+ "songname" +  "artname"+ "albumname"+ "songloc" +"desc");	
 			}
 		}
@@ -355,19 +355,19 @@ public class Musicimp {
 			ResultSet rs=null;
 			try {
 				Class.forName("com.mysql.jdbc.Driver");
-				con=DriverManager.getConnection("jdbc:mysql://localhost:3306/Music?user=root&password=root");
-				String query="select * from Musicsysytem order by Song_Name";		
+				con=DriverManager.getConnection("jdbc:mysql://localhost:3306/music_db?user=root&password=root");
+				String query="select * from Musicsystem order by Song_Name";		
 				stmt=con.createStatement();
 				rs=stmt.executeQuery(query);
-				System.out.println("Song_Id"+"Song_Name"+"Artitst_name"+"Album_name "+"Song_Location"+"Desc");
+				System.out.println("Song_Id"+"Song_Name"+"Artist_name"+"Album_name "+"Song_Location"+"Descp");
 				while(rs.next()) {
 					int songid=rs.getInt("Song_ID");
 					String songname=rs.getString("Song_Name");
-					String artname=rs.getString("Artitst_name");
+					String artname=rs.getString("Artist_name");
 					String albumname=rs.getString("Album_name");
 					String songloc=rs.getString("Song_Location");
-					String desc=rs.getString("Desc");
-					System.out.println("songid "+ "songname" +  "artname"+ "albumname"+ "songloc" +"desc");		
+					String desc=rs.getString("Descp");
+					System.out.println("songid "+ "songname" +  "artname"+ "albumname"+ "songloc" +"descp");		
 				}
 			}
 			catch(Exception e) {
