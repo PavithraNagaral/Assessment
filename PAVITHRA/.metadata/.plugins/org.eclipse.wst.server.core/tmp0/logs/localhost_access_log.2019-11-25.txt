@@ -1,0 +1,17 @@
+127.0.0.1 - - [25/Nov/2019:18:46:33 +0530] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [25/Nov/2019:18:55:14 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:18:55:57 +0530] "GET /empwebapp/loginform HTTP/1.1" 200 693
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:18:55:57 +0530] "GET /favicon.ico HTTP/1.1" 404 1085
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:18:57:26 +0530] "POST /empwebapp/login2 HTTP/1.1" 200 507
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:00:18 +0530] "GET /empwebapp/Login.html HTTP/1.1" 200 572
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:00:25 +0530] "POST /empwebapp/login HTTP/1.1" 200 273
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:00:36 +0530] "GET /empwebapp/AddEmp.html HTTP/1.1" 200 882
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:00:43 +0530] "GET /empwebapp/loginform HTTP/1.1" 200 693
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:00:50 +0530] "POST /empwebapp/login2 HTTP/1.1" 200 507
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:00:52 +0530] "GET /empwebapp/seeallemployeeform HTTP/1.1" 404 1106
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:00:56 +0530] "GET /empwebapp/searchemployeeform HTTP/1.1" 200 925
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:01:02 +0530] "GET /empwebapp/searchemp?empid=5 HTTP/1.1" 200 981
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:01:06 +0530] "GET /empwebapp/searchemp?empid=101 HTTP/1.1" 200 1444
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:01:18 +0530] "GET /empwebapp/updateemployeeform HTTP/1.1" 404 1106
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:01:28 +0530] "GET /empwebapp/searchemployeeform HTTP/1.1" 200 925
+0:0:0:0:0:0:0:1 - - [25/Nov/2019:19:01:32 +0530] "GET /empwebapp/deleteemployeeform HTTP/1.1" 200 281

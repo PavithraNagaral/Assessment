@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+   <form name="loginform" >
+       <div>
+           <input name="username" type="text" placeholder="username"><br>
+       </div>
+       <p id="pele"style="display: none; font-size: 10px; color: red;"> please enter the username</p>
+       <div>
+            <input name="password" id="pwd" type="password" placeholder="password"><br>
+            <input type="checkbox" onclick="mypass()" >show pass
+        </div>
+
+        <div>
+        <p id="pwd"style="display: none; font-size: 10px; color: red;"> please enter the pass</p>
+        
+    </div>
+
+        <div>
+            <button onclick="validateform()" type="button" name='login' >login</button>
+        </div>
+        
+
+   </form>
+    
+
+
+
+    <script src="form.js"></script>
+</body>
+</html>

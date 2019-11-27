@@ -1,0 +1,13 @@
+package com.manthan.dao;
+
+import com.manthan.bean.userinfobean;
+
+public class UserDaoImp implements UserDao  {
+
+	@Override
+	public userinfobean authenticate(String username, String pw) {
+		
+		return null;
+	}
+
+}

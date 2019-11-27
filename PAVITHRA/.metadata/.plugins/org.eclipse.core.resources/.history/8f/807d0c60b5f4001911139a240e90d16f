@@ -1,0 +1,13 @@
+
+public class TestA {
+
+	public static void main(String[] args) {
+		Student s = new Student("ppp",8,98);
+		int j=s.hashCode();
+		System.out.println(j);
+		
+		String n=s.toString();
+		System.out.println(n);
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.manthan.servelets;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/logout1")
+
+public class logout extends HttpServlet {
+
+}

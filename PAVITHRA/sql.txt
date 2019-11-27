@@ -1,0 +1,99 @@
+how databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| a                  |
+| elf_employee_db    |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql>  use elf_employee_db;
+Database changed
+mysql> show tabe
+    -> sho
+    -> show tables;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'tabe
+sho
+show tables' at line 1
+mysql> show tables;
+Empty set (0.00 sec)
+
+mysql> create table employee_info(emp_id int primary key,emp_name varchar(50),age int,salary double,designation varchar(25),mobile bigint);
+Query OK, 0 rows affected (0.49 sec)
+
+mysql> show tables;
++---------------------------+
+| Tables_in_elf_employee_db |
++---------------------------+
+| employee_info             |
++---------------------------+
+1 row in set (0.00 sec)
+
+mysql>  desc employee_info;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| emp_id      | int(11)     | NO   | PRI | NULL    |       |
+| emp_name    | varchar(50) | YES  |     | NULL    |       |
+| age         | int(11)     | YES  |     | NULL    |       |
+| salary      | double      | YES  |     | NULL    |       |
+| designation | varchar(25) | YES  |     | NULL    |       |
+| mobile      | bigint(20)  | YES  |     | NULL    |       |
++-------------+-------------+------+-----+---------+-------+
+6 rows in set (0.01 sec)
+
+mysql> insert into employee_info values(101,"abhi",22,50000,"sd",7411067543);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into employee_info values(102,"prat",22,60000,"testing",9535862653);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into employee_info values(103,"preeti",23,80000,"qa",9445678993);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> insert into employee_info values(104,"rahul",23,65000,"pd",9764378993);
+Query OK, 1 row affected (0.08 sec)
+
+mysql> insert into employee_info values(105,"ks",21,75000,"jd",9923456993);
+Query OK, 1 row affected (0.07 sec)
+
+mysql> select * from employee_info;
++--------+----------+------+--------+-------------+------------+
+| emp_id | emp_name | age  | salary | designation | mobile     |
++--------+----------+------+--------+-------------+------------+
+|    101 | abhi     |   22 |  50000 | sd          | 7411067543 |
+|    102 | prat     |   22 |  60000 | testing     | 9535862653 |
+|    103 | preeti   |   23 |  80000 | qa          | 9445678993 |
+|    104 | rahul    |   23 |  65000 | pd          | 9764378993 |
+|    105 | ks       |   21 |  75000 | jd          | 9923456993 |
++--------+----------+------+--------+-------------+------------+\
+
+
+
+update employee_info set emp_name="pm" where emp_id=104;
+
+
+mysql> select * from employee_info where salary>55000;
++--------+----------+------+--------+-------------+------------+
+| emp_id | emp_name | age  | salary | designation | mobile     |
++--------+----------+------+--------+-------------+------------+
+|    102 | prat     |   22 |  60000 | testing     | 9535862653 |
+|    103 | preeti   |   23 |  80000 | qa          | 9445678993 |
+|    104 | pm       |   22 |  65000 | pd          | 9764378993 |
+|    105 | ks       |   21 |  75000 | jd          | 9923456993 |
++--------+----------+------+--------+-------------+------------+
+4 rows in set (0.00 sec)
+
+mysql> select emp_name,emp_id from employee_info where salary>55000;
++----------+--------+
+| emp_name | emp_id |
++----------+--------+
+| prat     |    102 |
+| preeti   |    103 |
+| pm       |    104 |
+| ks       |    105 |
++----------+--------+

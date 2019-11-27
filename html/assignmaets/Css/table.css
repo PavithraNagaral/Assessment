@@ -1,0 +1,36 @@
+table ,th,td{
+    /* border: 2px solid black;
+    border-collapse: collapse; */
+    text-align: center;
+    padding: 10px;
+    margin-left: 200px;
+    margin-top: 100px;
+    font-size: 20px;
+    border-radius: 50px;
+    font-family: monospace;
+
+    
+}
+table{
+    width: 500px;
+    border: 2px solid black;
+    background-color: black;
+}
+th{
+    background-color:mediumturquoise;
+}
+body{
+    background-image:url("/Images/maple-leaf-4597501__340.jpg");
+    background-size: cover;
+}
+tr:nth-child(even){
+    background-color: rgb(240, 156, 128);
+}
+tr:nth-child(odd){
+    background-color:rgb(196, 188, 124);
+}
+td:hover{
+    background-color: rgb(68, 179, 96);
+    color:white;
+    cursor: pointer;
+}

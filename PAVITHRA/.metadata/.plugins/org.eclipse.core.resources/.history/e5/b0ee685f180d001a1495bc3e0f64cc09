@@ -1,0 +1,5 @@
+package com.manthan.dao;
+
+public class UserDaoImp {
+
+}

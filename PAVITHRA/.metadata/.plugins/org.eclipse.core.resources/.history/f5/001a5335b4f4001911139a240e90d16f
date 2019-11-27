@@ -1,0 +1,10 @@
+
+public class TestA {
+
+	public static void main(String[] args) {
+		Student s = new Student();
+		int j=s.hashCode();
+		System.out.println(j);
+	}
+
+}

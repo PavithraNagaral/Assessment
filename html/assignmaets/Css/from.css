@@ -1,0 +1,40 @@
+form{
+    border: 2px solid black;
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 100px;
+    padding: 50px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+    background-image: url("/Images/sea-4596727__340.jpg");
+    background-size: cover;
+    font-size: 25px;
+    color: rgb(18, 22, 15);
+    font-family:cursive;
+    box-shadow:0 0 30px blue;
+}
+
+body{
+    background-image:url("/Images/horse-4596827__340.jpg");
+    background-size: cover;
+
+}
+input[type="text"],input[type="password"]{
+    width: 200px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
+input[type="submit"]{
+
+    border: 2PX solid black;
+  
+}
+input[type="submit"]:hover{
+    background-color: blue;
+
+}

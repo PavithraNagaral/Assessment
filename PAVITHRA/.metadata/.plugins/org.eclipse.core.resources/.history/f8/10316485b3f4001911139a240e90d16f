@@ -1,0 +1,8 @@
+
+public class Student {
+	int hashCode()
+	{
+		return 5;
+	}
+
+}

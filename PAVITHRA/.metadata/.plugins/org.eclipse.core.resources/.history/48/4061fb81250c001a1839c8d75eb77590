@@ -1,0 +1,14 @@
+package com.manthan.Thread;
+
+public class A {
+	public static void main(String[] args) {
+//		MyTask m=new MyTask();
+//		m.start();
+//		
+		float a = 22/7;
+		double d = 22/7;
+		System.out.println("float "+a);
+		System.out.println("float "+d);
+	}
+	
+}

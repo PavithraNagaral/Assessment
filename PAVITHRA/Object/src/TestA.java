@@ -1,0 +1,24 @@
+
+public class TestA {
+
+	public static void main(String[] args) {
+		Student s = new Student("pp",6,9);
+		
+		Student t = new Student("pp",6,9);
+		int j=s.hashCode();
+		int k=t.hashCode();
+		/*System.out.println(j);
+		
+		String n=s.toString();
+		System.out.println(n);*/
+		
+		System.out.println(s);
+		System.out.println(j);
+		System.out.println(k);
+		boolean res=s.equals(t);
+		System.out.println(res);
+		
+		
+	}
+
+}
