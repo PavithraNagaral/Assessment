@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="weight.js"></script>
+
+</head>
+
+<body>
+    <form>
+        <div class="form-row">
+            <div class="col col-sm-8">
+                <input id="lbsInput" type="number" class="form-control form-control-lg mr-2 mb-2"
+                    placeholder="Input Value..." autocomplete="off">
+            </div>
+            <div class="col col-4">
+                <select id="selectOption" name="selectOption" class="form-control form-control-lg"
+                    onchange="formula(this)">
+                    <option selected value="default">From...</option>
+                    <option value="kg">Kg</option>
+                    <option value="pound">Pound</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+
+    <div id="output">
+
+        <div class="card mt-2 bg-info pl-2">
+            <div class="card-block">
+                <h4>Pound:</h4>
+                <div id="poundOutput"></div>
+            </div>
+        </div>
+
+        <div class="card mt-2 bg-success pl-2">
+            <div class="card-block">
+                <h4>Grams:</h4>
+                <div id="gramsOutput"></div>
+            </div>
+        </div>
+
+        <div class="card bg-warning mt-2">
+            <div class="card-block pl-2">
+                <h4>Ounces:</h4>
+                <div id="ozOutput"></div>
+            </div>
+        </div>
+
+        <div class="card mt-2 bg-danger pl-2">
+            <div class="card-block">
+                <h4>KiloGrams:</h4>
+                <div id="kgOutput"></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
